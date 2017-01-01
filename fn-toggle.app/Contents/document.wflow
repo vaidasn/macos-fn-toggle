@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "System Preferences"	reveal anchor "keyboardTab" of pane "com.apple.preference.keyboard"end telltell application "System Events" to tell process "System Preferences"	click checkbox 1 of tab group 1 of window 1end tellquit application "System Preferences"</string>
+					<string>tell application "System Preferences"	reveal anchor "keyboardTab" of pane "com.apple.preference.keyboard"end telltell application "System Events" to tell process "System Preferences"	click checkbox 1 of tab group 1 of window 1	set functionKeyCheckbox to checkbox 1 of tab group 1 of window 1	tell functionKeyCheckbox		if (its value as boolean) then			display notification "Function keys are now enabled" with title "Function Keys"		else			display notification "Function keys are now disabled" with title "Function Keys"		end if	end tellend tellquit application "System Preferences"</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>271.500000:316.000000</string>
+				<string>499.500000:316.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
